@@ -1,0 +1,36 @@
+{
+  "name": "prynne",
+  "version": "0.0.1",
+  "description": "The functional static site generator",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keplersj/prynne.git"
+  },
+  "keywords": [
+    "static",
+    "site",
+    "generator",
+    "ssg",
+    "web-components",
+    "esm",
+    "web",
+    "website",
+    "markdown"
+  ],
+  "author": "Kepler Sticka-Jones <kepler@stickajones.org>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keplersj/prynne/issues"
+  },
+  "homepage": "https://github.com/keplersj/prynne#readme",
+  "devDependencies": {
+    "@types/node": "^16.10.2",
+    "typescript": "^4.4.3"
+  }
+}
