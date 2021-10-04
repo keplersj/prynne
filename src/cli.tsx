@@ -1,6 +1,7 @@
 import meow from "meow";
 import React from "react";
-import { render, Static, Text } from "ink";
+import { render } from "ink";
+import { BuildCommand, DevCommand, UnknownCommand } from "./cli/index.js";
 
 const cli = meow(
   `
@@ -31,18 +32,11 @@ switch (cli.input[0]) {
     cli.showHelp(0);
     break;
   case "build":
-    render(<Text color="red">Build Command Not Yet Implemented</Text>);
+    render(<BuildCommand />);
     break;
   case "dev":
-    render(<Text color="red">Dev Command Not Yet Implemented</Text>);
+    render(<DevCommand />);
     break;
   default:
-    render(
-      <Text color="red">
-        Unknown command provided:{" "}
-        <Text color="redBright" bold>
-          {cli.input[0]}
-        </Text>
-      </Text>
-    );
+    render(<UnknownCommand command={cli.input[0]} />);
 }
